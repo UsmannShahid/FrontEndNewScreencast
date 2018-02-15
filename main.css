@@ -45,6 +45,7 @@ p {
 
 a {
   color: #ff4081;
+  transition: .2s ease-in-out;
 }
 
 a:active,
@@ -114,6 +115,39 @@ a:focus {
 
 .is-liked {
   animation: flash 1s 2;
+}
+
+
+/*-----------------------------------------------------
+ * Form
+--------------------------------------------------------*/
+
+.form {
+  height: 0;
+  margin-bottom: 20px;
+  opacity: 0; 
+  visibility: hidden;
+}
+
+.form.is-visible {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  box-sizing: border-box;
+  border: 1px solid #b6b6b6;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
 }
 
 /*-----------------------------------------------------
